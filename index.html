@@ -12,142 +12,345 @@
         }
         
         body {
-            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-            font-size: 10px;
-            line-height: 1.4;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
             color: #333;
-            background: #fff;
-            padding: 20px;
+            background: #f5f5f5;
+            padding: 16px;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 24px;
         }
         
+        /* Header */
         .header {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #333;
         }
         
         .header-left h1 {
-            font-size: 14px;
-            font-weight: normal;
+            font-size: 24px;
+            font-weight: 600;
             letter-spacing: 2px;
+            margin-bottom: 8px;
         }
         
         .header-right h2 {
-            font-size: 12px;
-            font-weight: normal;
+            font-size: 16px;
+            font-weight: 500;
             letter-spacing: 1px;
+            color: #666;
         }
         
+        /* Project Info */
         .project-info {
-            margin-bottom: 20px;
-            font-size: 10px;
+            margin-bottom: 24px;
+            padding: 16px;
+            background: #f9f9f9;
+            border-radius: 6px;
         }
         
         .project-info p {
-            margin-bottom: 3px;
+            margin-bottom: 8px;
+            font-size: 14px;
         }
         
-        table {
+        .project-info p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .project-info strong {
+            color: #555;
+        }
+        
+        /* Section Title */
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        /* Desktop Table */
+        .desktop-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 9px;
-            margin-bottom: 30px;
+            margin-bottom: 32px;
         }
         
-        th, td {
-            border: 1px solid #ccc;
-            padding: 6px 8px;
+        .desktop-table th,
+        .desktop-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
             text-align: left;
             vertical-align: middle;
         }
         
-        th {
-            background-color: #f5f5f5;
-            font-weight: normal;
+        .desktop-table th {
+            background-color: #f0f0f0;
+            font-weight: 600;
+            font-size: 13px;
             text-align: center;
+            white-space: nowrap;
         }
         
-        .main-table th {
-            font-size: 9px;
+        .desktop-table td {
+            font-size: 13px;
         }
         
-        .main-table td {
-            font-size: 9px;
+        .desktop-table a {
+            color: #0066cc;
+            text-decoration: none;
+            word-break: break-all;
         }
         
-        .main-table a {
+        .desktop-table a:hover {
+            text-decoration: underline;
+        }
+        
+        .desktop-table tr:hover {
+            background-color: #fafafa;
+        }
+        
+        /* Mobile Cards */
+        .mobile-cards {
+            display: none;
+        }
+        
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+        
+        .card-header {
+            background: #f0f0f0;
+            padding: 12px 16px;
+            font-weight: 600;
+            font-size: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .card-body {
+            padding: 16px;
+        }
+        
+        .card-row {
+            display: flex;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .card-row:last-child {
+            margin-bottom: 0;
+        }
+        
+        .card-label {
+            flex: 0 0 100px;
+            font-weight: 500;
+            color: #666;
+        }
+        
+        .card-value {
+            flex: 1;
+            word-break: break-word;
+        }
+        
+        .card-value a {
             color: #0066cc;
             text-decoration: none;
         }
         
-        .main-table a:hover {
-            text-decoration: underline;
-        }
-        
+        /* Footer */
         .footer {
-            margin-top: 30px;
-            border-top: 1px solid #ccc;
-            padding-top: 15px;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #ddd;
         }
         
         .footer-notes {
-            font-size: 8px;
-            color: #666;
-            margin-bottom: 15px;
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 24px;
         }
         
         .footer-notes p {
-            margin-bottom: 3px;
+            margin-bottom: 4px;
         }
         
         .footer-bottom {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: flex-end;
+            gap: 24px;
         }
         
         .logo {
-            font-size: 18px;
-            font-weight: bold;
-            letter-spacing: 3px;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 4px;
             color: #333;
         }
         
         .sign-box {
             display: grid;
-            grid-template-columns: repeat(4, 80px);
-            grid-template-rows: repeat(2, 25px);
-            border: 1px solid #ccc;
-            font-size: 8px;
+            grid-template-columns: 70px 1fr 70px 1fr;
+            gap: 1px;
+            background: #ddd;
+            border: 1px solid #ddd;
+            font-size: 11px;
+            min-width: 300px;
         }
         
         .sign-box div {
-            border: 1px solid #ccc;
-            padding: 3px 5px;
+            background: #fff;
+            padding: 8px;
             display: flex;
             align-items: center;
         }
         
         .sign-box .label {
             background-color: #f5f5f5;
+            font-weight: 500;
+        }
+        
+        /* Download Section */
+        .download-section {
+            margin-top: 24px;
+            padding: 16px;
+            background: #e8f4fd;
+            border-radius: 6px;
+        }
+        
+        .download-section h3 {
+            font-size: 14px;
+            margin-bottom: 12px;
+            color: #0066cc;
+        }
+        
+        .download-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 16px;
+            background: #0066cc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        
+        .download-btn:hover {
+            background: #0052a3;
+        }
+        
+        .download-btn svg {
+            margin-right: 8px;
+        }
+        
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 12px;
+                font-size: 14px;
+            }
+            
+            .container {
+                padding: 16px;
+                border-radius: 0;
+            }
+            
+            .header {
+                flex-direction: column;
+            }
+            
+            .header-left h1 {
+                font-size: 20px;
+            }
+            
+            .header-right {
+                margin-top: 8px;
+            }
+            
+            .header-right h2 {
+                font-size: 14px;
+            }
+            
+            .desktop-table {
+                display: none;
+            }
+            
+            .mobile-cards {
+                display: block;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .sign-box {
+                width: 100%;
+                min-width: auto;
+            }
+            
+            .download-links {
+                flex-direction: column;
+            }
+            
+            .download-btn {
+                width: 100%;
+                justify-content: center;
+            }
         }
         
         @media print {
             body {
-                padding: 10mm;
+                background: #fff;
+                padding: 0;
             }
             
             .container {
-                max-width: 100%;
+                box-shadow: none;
+                padding: 0;
             }
             
-            .main-table a {
+            .mobile-cards {
+                display: none !important;
+            }
+            
+            .desktop-table {
+                display: table !important;
+            }
+            
+            .download-section {
+                display: none;
+            }
+            
+            .desktop-table a {
                 color: #333;
             }
         }
@@ -171,16 +374,19 @@
             <p><strong>Client:</strong> 古川翔一 様</p>
         </div>
         
-        <!-- Main Table - Miscellaneous Works -->
-        <table class="main-table">
+        <!-- Section Title -->
+        <h3 class="section-title">工事仕様一覧</h3>
+        
+        <!-- Desktop Table -->
+        <table class="desktop-table">
             <thead>
                 <tr>
-                    <th style="width: 150px;">項目</th>
-                    <th style="width: 130px;">設置場所</th>
-                    <th style="width: 90px;">メーカー</th>
-                    <th style="width: 170px;">品番</th>
-                    <th style="width: 180px;">材質/色/サイズ</th>
-                    <th style="width: 100px;">参考URL</th>
+                    <th>項目</th>
+                    <th>設置場所</th>
+                    <th>メーカー</th>
+                    <th>品番</th>
+                    <th>材質/色/サイズ</th>
+                    <th>参考URL</th>
                 </tr>
             </thead>
             <tbody>
@@ -258,6 +464,234 @@
                 </tr>
             </tbody>
         </table>
+        
+        <!-- Mobile Cards -->
+        <div class="mobile-cards">
+            <div class="card">
+                <div class="card-header">カーポート設置工事</div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label">設置場所</span>
+                        <span class="card-value">外構・駐車場</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">メーカー</span>
+                        <span class="card-value">LIXIL</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">品番</span>
+                        <span class="card-value">ネスカF 2台用 54-50型</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">仕様</span>
+                        <span class="card-value">熱線吸収ポリカ H22</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">参考URL</span>
+                        <span class="card-value"><a href="https://www.lixil.co.jp/lineup/carspace/nesca/variation/type_f/" target="_blank">LIXIL ネスカF 2台用</a></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">防犯カメラ設置工事</div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label">設置場所</span>
+                        <span class="card-value">玄関外部・玄関上部</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">メーカー</span>
+                        <span class="card-value">マスプロ</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">品番</span>
+                        <span class="card-value">WHCBL7ML</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">仕様</span>
+                        <span class="card-value">7インチモニター付 電気工事・補修込</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">参考URL</span>
+                        <span class="card-value"><a href="https://www.maspro.co.jp/prod/whcbl7ml/" target="_blank">マスプロ WHCBL7ML</a></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">食洗機新設工事</div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label">設置場所</span>
+                        <span class="card-value">キッチン</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">メーカー</span>
+                        <span class="card-value">ファーストプラス</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">品番</span>
+                        <span class="card-value">ビルトイン食洗機 標準タイプ</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">仕様</span>
+                        <span class="card-value">給排水接続・電気工事込</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">参考URL</span>
+                        <span class="card-value"><a href="https://www.first-plus.co.jp/catalog/201904/FP201904_pl_000-032.pdf" target="_blank">カタログPDF</a></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">シャッター取付工事</div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label">設置場所</span>
+                        <span class="card-value">洋室C</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">メーカー</span>
+                        <span class="card-value">LIXIL</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">品番</span>
+                        <span class="card-value">リフォームシャッター 標準タイプ</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">仕様</span>
+                        <span class="card-value">W1650×H1800</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">参考URL</span>
+                        <span class="card-value"><a href="https://www.lixil.co.jp/lineup/window/rshutter/" target="_blank">LIXIL リフォームシャッター</a></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">アンテナ工事</div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label">設置場所</span>
+                        <span class="card-value">屋根裏想定</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">メーカー</span>
+                        <span class="card-value">-</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">品番</span>
+                        <span class="card-value">UHF平面デザインアンテナ</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">仕様</span>
+                        <span class="card-value">地上デジタル放送用 ブースター設置込</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">網戸新設工事</div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label">設置場所</span>
+                        <span class="card-value">開口窓全箇所</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">メーカー</span>
+                        <span class="card-value">メーカー純正品</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">仕様</span>
+                        <span class="card-value">サッシ同色</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">フロアコーティング施工</div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label">設置場所</span>
+                        <span class="card-value">LDK＋洋室全室 階段含</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">品番</span>
+                        <span class="card-value">プレミアムガラスコーティング</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">仕様</span>
+                        <span class="card-value">30年保証</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">水まわりコート4点セット</div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label">設置場所</span>
+                        <span class="card-value">キッチン・浴室・トイレ・洗面台</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">仕様</span>
+                        <span class="card-value">新築特典サービス施工</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">インターホン交換工事</div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label">設置場所</span>
+                        <span class="card-value">玄関</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">メーカー</span>
+                        <span class="card-value">アイホン</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">品番</span>
+                        <span class="card-value">WP-24A</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">仕様</span>
+                        <span class="card-value">スマホ連動・Wi-Fi対応・カメラ付き・夜間LED付き</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">参考URL</span>
+                        <span class="card-value"><a href="https://www.aiphone.co.jp/products/detached/tv-doorphone/wp-24a/spec/" target="_blank">アイホン WP-24A 仕様</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Download Section -->
+        <div class="download-section">
+            <h3>ダウンロード</h3>
+            <div class="download-links">
+                <a href="仕様書_古川様邸.xlsx" class="download-btn" download>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Excel形式
+                </a>
+                <a href="仕様書_古川様邸.md" class="download-btn" download>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Markdown形式
+                </a>
+            </div>
+        </div>
         
         <!-- Footer -->
         <div class="footer">
