@@ -230,6 +230,24 @@
             font-weight: 500;
         }
         
+        .sign-box input {
+            width: 100%;
+            border: none;
+            background: transparent;
+            font-size: 11px;
+            font-family: inherit;
+            padding: 0;
+            outline: none;
+        }
+        
+        .sign-box input:focus {
+            background: #fffde7;
+        }
+        
+        .sign-box input::placeholder {
+            color: #ccc;
+        }
+        
         /* Download Section */
         .download-section {
             margin-top: 24px;
@@ -705,19 +723,19 @@
                 
                 <div class="sign-box">
                     <div class="label">sign</div>
-                    <div></div>
+                    <div><input type="text" placeholder="署名" /></div>
                     <div class="label">date</div>
-                    <div></div>
+                    <div><input type="text" placeholder="日付" /></div>
                     <div class="label">project</div>
-                    <div>筑紫野市むさしヶ丘1丁目</div>
+                    <div><input type="text" value="筑紫野市むさしヶ丘1丁目" /></div>
                     <div class="label">no.</div>
-                    <div></div>
+                    <div><input type="text" placeholder="番号" /></div>
                     <div class="label">name</div>
-                    <div></div>
+                    <div><input type="text" placeholder="担当者名" /></div>
                     <div class="label">scale</div>
-                    <div>-</div>
+                    <div><input type="text" value="-" /></div>
                     <div class="label">title</div>
-                    <div>オプション工事仕様書</div>
+                    <div><input type="text" value="オプション工事仕様書" /></div>
                 </div>
             </div>
         </div>
